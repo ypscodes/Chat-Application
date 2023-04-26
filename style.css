@@ -125,6 +125,11 @@ form .field i {
   cursor: pointer;
 }
 
+.form form .field i.active::before{
+  color: #333;
+  content: "\f070";
+}
+
 /* Users CSS */
 
 .users {
@@ -365,8 +370,8 @@ form .field i {
   background: #333;
   font-size: 19px;
   cursor: pointer;
-  opacity: 0.7;
-  pointer-events: none;
+  /* opacity: 0.7; */
+  /* pointer-events: none; */
   border-radius: 0 5px 5px 0;
-  transition: all 0.3s ease;
+  /* transition: all 0.3s ease; */
 } 
