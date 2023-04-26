@@ -49,6 +49,7 @@ form .error-txt {
   border-radius: 5px;
   margin-bottom: 10px;
   border: 1px solid #f5c6cb;
+  display: none;
 }
 
 form .name-details {
@@ -197,6 +198,7 @@ form .field i {
 .users .search .text{
   font-size: 18px;
 }
+
 .users .search input{
   position: absolute;
   height: 42px;
@@ -206,6 +208,18 @@ form .field i {
   border: 1px solid #ccc;
   outline: none;
   border-radius: 5px 0 0 5px;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.2s ease;
+}
+
+.users .search input.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.search button.active i::before{
+  content: '\f00d';
 }
 
 .users .search button{
@@ -216,11 +230,16 @@ form .field i {
   font-size: 17px;
   cursor: pointer;
   border: none;
-  color: #fff;
-  background: #333;
+  color: #333;
+  background: #fff;
   outline: none;
   border-radius: 0 5px 5px 0;
-  /* transition: all 0.2s ease; */
+  transition: all 0.2s ease;
+}
+
+.users .search button.active {
+  color: #fff;
+  background: #333;
 }
 
 .users-list{
