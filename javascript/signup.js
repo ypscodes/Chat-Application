@@ -1,5 +1,6 @@
 const form = document.querySelector(".signup form"),
-continueBtn = form.querySelector(".button input");
+continueBtn = form.querySelector(".button input"),
+errorText = form.querySelector(".error-txt");
 
 form.onsubmit = (e) => {
     e.preventDefault();
@@ -14,6 +15,15 @@ continueBtn.onclick = () => {
             if (xhr.status === 200){
                 let data = xhr.response;
                 console.log(data);
+                if (data === "Success") {
+                    location.href = "users.php";
+                    // console.log("Working");
+                    // return false;
+                }
+                else {
+                    errorText.textContent = data;
+                    errorText.style.display = "block";                    
+                }
             }
         }
     }

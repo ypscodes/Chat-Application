@@ -33,7 +33,7 @@
                 <span class="anim-border bottom"></span>
                 <span class="anim-border left"></span>
             </form>
-            <div class="link">Not yet signed up? <a href="#">Signup now</a></div>
+            <div class="link">Not yet signed up? <a href="index.php">Signup now</a></div>
         </section>
     </div>
     <script src="javascript/pass-show-hide.js"></script>
